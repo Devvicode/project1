@@ -1,0 +1,110 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .book-set {
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .book-details {
+            float: left;
+        }
+
+        .button-container {
+            float: right;
+        }
+
+        button {
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        h3 {
+            margin: 0;
+        }
+    </style>
+    <title>Book Sets</title>
+</head>
+<body>
+    <!-- Book Set 1 -->
+    <div class="book-set">
+        <div class="book-details">
+		<img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/81fUXMwBRhL._AC_UF1000,1000_QL80_.jpg" alt="the famous five">
+            <h3>Book Set 1</h3>
+        </div>
+        <div class="button-container">
+            <button onclick="incrementQuantity('Book Set 1', 20)">+</button>
+            <span id="quantityBookSet1">0</span>
+            <button onclick="decrementQuantity('Book Set 1', 20)">-</button>
+            <button onclick="showTotal('Book Set 1', 20, 'buy')">Buy</button>
+            <button onclick="showTotal('Book Set 1', 10, 'rent')">Rent</button>
+            <button onclick="addToCart('Book Set 1', 15)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Book Set 2 -->
+    <div class="book-set">
+        <div class="book-details">
+            <h3>Book Set 2</h3>
+        </div>
+        <div class="button-container">
+            <button onclick="incrementQuantity('Book Set 2', 25)">+</button>
+            <span id="quantityBookSet2">0</span>
+            <button onclick="decrementQuantity('Book Set 2', 25)">-</button>
+            <button onclick="showTotal('Book Set 2', 25, 'buy')">Buy</button>
+            <button onclick="showTotal('Book Set 2', 12, 'rent')">Rent</button>
+            <button onclick="addToCart('Book Set 2', 18)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Add more book sets as needed -->
+
+    <script>
+        function incrementQuantity(bookSetTitle, price) {
+            var quantityElement = document.getElementById(`quantity${bookSetTitle.replace(/\s+/g, '')}`);
+            var currentQuantity = parseInt(quantityElement.textContent);
+            quantityElement.textContent = currentQuantity + 1;
+        }
+
+        function decrementQuantity(bookSetTitle, price) {
+            var quantityElement = document.getElementById(`quantity${bookSetTitle.replace(/\s+/g, '')}`);
+            var currentQuantity = parseInt(quantityElement.textContent);
+            if (currentQuantity > 0) {
+                quantityElement.textContent = currentQuantity - 1;
+            }
+        }
+
+        function showTotal(bookSetTitle, price, action) {
+            var quantityElement = document.getElementById(`quantity${bookSetTitle.replace(/\s+/g, '')}`);
+            var quantity = parseInt(quantityElement.textContent);
+            var total = price * quantity;
+
+            if (action === 'buy') {
+                alert(`You have selected to buy ${quantity} copies of ${bookSetTitle}. Total cost: $${total}`);
+            } else if (action === 'rent') {
+                alert(`You have selected to rent ${quantity} copies of ${bookSetTitle}. Total cost: $${total}`);
+            }
+        }
+
+        function addToCart(bookSetTitle, price) {
+            var quantityElement = document.getElementById(`quantity${bookSetTitle.replace(/\s+/g, '')}`);
+            var quantity = parseInt(quantityElement.textContent);
+            var total = price * quantity;
+            alert(`${quantity} copies of ${bookSetTitle} added to cart. Total cost: $${total}`);
+        }
+    </script>
+</body>
+</html>
+

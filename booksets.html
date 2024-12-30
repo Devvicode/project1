@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: "papyrus", fantasy;
+            font-size: 50px;
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+            font-family: "garamond", serif;
+            font-size: 50px;
+        }
+
+        .book-set {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+
+        .book-details {
+            margin-right: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+    </style>
+    <title>Book Sets</title>
+</head>
+<body>
+    <h1> Book Sets </h1>
+
+    <!-- Book Set 1 -->
+    <div class="book-set">
+        <div class="book-details">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/81fUXMwBRhL._AC_UF1000,1000_QL80_.jpg" alt="the famous five">
+            <h3>The Famous Five: Box Set</h3>
+        </div>
+        <div class="button-container">
+            <button onclick="showTotal('Book Set 1', 20, 'buy')">Buy</button>
+            <button onclick="showTotal('Book Set 1', 10, 'rent')">Rent</button>
+            <button onclick="addToCart('Book Set 1', 15)">Add to Cart</button>
+            <button onclick="incrementQuantity('Book Set 1', 20)">+</button>
+            <span id="quantityBookSet1">0</span>
+            <button onclick="decrementQuantity('Book Set 1', 20)">-</button>
+        </div>
+    </div>
+
+    <!-- Book Set 2 -->
+    <div class="book-set">
+        <div class="book-details">
+            <img src="C:\Users\Vijayalakshmi\OneDrive\Desktop\fsd project\81ybMfTD4RL._AC_UF1000,1000_QL80_.jpg" alt="the naughtiest girl">
+            <h3>The Naughtiest Girl: Box Set</h3>
+        </div>
+        <div class="button-container">
+            <button onclick="showTotal('Book Set 2', 25, 'buy')">Buy</button>
+            <button onclick="showTotal('Book Set 2', 12, 'rent')">Rent</button>
+            <button onclick="addToCart('Book Set 2', 18)">Add to Cart</button>
+            <button onclick="incrementQuantity('Book Set 2', 25)">+</button>
+            <span id="quantityBookSet2">0</span>
+            <button onclick="decrementQuantity('Book Set 2', 25)">-</button>
+        </div>
+    </div>
+
+    <!-- Book Set 3 -->
+    <div class="book-set">
+        <div class="book-details">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/81mBkVrLbUL._AC_UF1000,1000_QL80_.jpg" alt="the heroes of olympus">
+            <h3>The Heroes of Olympus: Box Set</h3>
+        </div>
+        <div class="button-container">
+            <button onclick="showTotal('Book Set 3', 35, 'buy')">Buy</button>
+            <button onclick="showTotal('Book Set 3', 12, 'rent')">Rent</button>
+            <button onclick="addToCart('Book Set 3', 18)">Add to Cart</button>
+            <button onclick="incrementQuantity('Book Set 3', 35)">+</button>
+            <span id="quantityBookSet3">0</span>
+            <button onclick="decrementQuantity('Book Set 3', 35)">-</button>
+        </div>
+    </div>
+
+    <!-- Add more book sets as needed -->
+
+    <script>
+        // Your JavaScript functions here...
+    </script>
+</body>
+</html>

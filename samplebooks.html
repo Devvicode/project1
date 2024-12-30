@@ -1,0 +1,369 @@
+<html>
+<head>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+			font-family:"papyrus",fantasy;
+			font-size:50px;
+        }
+
+        .books-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .book {
+            width: 200px;
+            text-align: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            width: 80px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+    </style>
+    <title>Book Store</title>
+</head>
+<body>
+    <h1>Books on Site</h1>
+
+    <div class="books-container">
+        <!-- Book 1 -->
+        <div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/91pI+R+GE7L._AC_UF1000,1000_QL80_.jpg" alt="Harry potter and the Philospher's Stone">
+            <div class="button-container">
+			 <button onclick="showTotal('Book 1', 20, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 1', 10, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 1', 15)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 1', 20)">+</button>
+                <span id="quantityBook1">0</span>
+                <button onclick="decrementQuantity('Book 1', 20)">-</button>
+               
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/harry-potter-and-the-chamber-of-secrets-original-imaghhe7hzdp76fh.webp" alt="Harry Potter and the Chanmber of Secrets">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 2', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 2', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 2', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 2', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 2', 25)">-</button>
+              
+            </div>
+        </div>
+		 <div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg" alt="Harry Potter and the Prizoner of Azkaban">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 3', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 3', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 3', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 3', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 3', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/81aTxTMB33L._AC_UF1000,1000_QL80_.jpg" alt="Harry Potter and the Goblet of Fire">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 4', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 4', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 4', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 4', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 4', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/Harry_Potter_and_the_Order_of_the_Phoenix.jpg" alt="Harry Potter and the order of pheonix">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 5', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 5', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 5', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 5', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 5', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/Harry_Potter_and_the_Half-Blood_Prince_cover.png" alt="Harry Potter and the half blood prince">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 6', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 6', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 6', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 6', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 6', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/71sH3vxziLL._AC_UF1000,1000_QL80_.jpg" alt="Harry Potter and the Deathly Hallows">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 7', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 7', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 7', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 7', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 7', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/mafia-queens-of-mumbai-stories-of-women-from-the-ganglands-250x250.webp" alt="The Mafia Queens of Mumbai">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 8', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 8', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 8', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 8', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 8', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/71DFl+QORkL._AC_UF1000,1000_QL80_.jpg" alt="Poppy war">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 9', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 9', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 9', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 9', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 9', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/the-dragon-republic-the-poppy-war-book-2.jpg" alt="Dragon Republic">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 10', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 10', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 10', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 10', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 10', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/71Nm9KhYq5L._AC_UF1000,1000_QL80_.jpg" alt="burning god">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 11', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 11', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 11', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 11', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 11', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/9788174368942.png" alt="dongri to dubai">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 12', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 12', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 12', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 12', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 12', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/diary_wimpy_kid_217-7f1a7bab680d4f928963cbe02a321ff5.jpg" alt="diary of a wimpy kid">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 13', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 13', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 13', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 13', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 13', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/71dQACXhz6L._AC_UF1000,1000_QL80_.jpg" alt="lessons in chemistry">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 14', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 14', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 14', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 14', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 14', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/81hnazZqYkL._AC_UL300_SR205,300_.jpg" alt="shadow and bone">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 15', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 15', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 15', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 15', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 15', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/81iTG5sYcoL._AC_UL900_SR615,900_.jpg" alt="Siege and Storm">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 16', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 16', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 16', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 2', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 2', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/91IlgeznrnS._AC_UF1000,1000_QL80_.jpg" alt="Run and Rising">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 17', 25, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 17', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 17', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 17', 25)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 17', 25)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/9781407132082.webp" alt="Hunger Games">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 18', 35, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 18', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 18', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 18', 35)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 18', 35)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/mockingjay-hunger-games-trilogy-original-imafsgyjbmqg6hgx.webp" alt="Mocking Jay">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 19', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 19', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 19', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 19', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 19', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/51tK519fUHL.jpg" alt="Catching Fire">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 20', 35, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 20', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 20', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 20', 35)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 20', 35)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/1_DanxK6MUuQsdfId-quhb-g.jpg" alt="The Kite Runner">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 21', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 21', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 21', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 21', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 21', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/a-thousand-splendid-suns.jpg" alt="A Thousand Slepndid Suns">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 22', 35, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 22', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 22', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 22', 35)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 22', 35)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/and-the-mountains-echoed1.png" alt="And The Mountains Echoed">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 23', 30, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 23', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 23', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 23', 30)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 23', 30)">-</button>
+			 </div>
+        </div>
+		<div class="book">
+            <img src="C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/51YzH3BRrPL._SL500_.jpg" alt="Black Friday">
+            <div class="button-container">
+			   <button onclick="showTotal('Book 24', 35, 'buy')">Buy</button>
+                <button onclick="showTotal('Book 24', 12, 'rent')">Rent</button>
+                <button onclick="addToCart('Book 24', 18)">Add to Cart</button>
+                <button onclick="incrementQuantity('Book 24', 35)">+</button>
+                <span id="quantityBook2">0</span>
+                <button onclick="decrementQuantity('Book 24', 35)">-</button>
+			 </div>
+        </div>
+        <!-- Add more books as needed -->
+    </div>
+
+    <script>
+        function incrementQuantity(bookTitle, price) {
+            var quantityElement = document.getElementById(`quantity${bookTitle.replace(/\s+/g, '')}`);
+            var currentQuantity = parseInt(quantityElement.textContent);
+            quantityElement.textContent = currentQuantity + 1;
+        }
+
+        function decrementQuantity(bookTitle, price) {
+            var quantityElement = document.getElementById(`quantity${bookTitle.replace(/\s+/g, '')}`);
+            var currentQuantity = parseInt(quantityElement.textContent);
+            if (currentQuantity > 0) {
+                quantityElement.textContent = currentQuantity - 1;
+            }
+        }
+
+        function showTotal(bookTitle, price, action) {
+            var quantityElement = document.getElementById(`quantity${bookTitle.replace(/\s+/g, '')}`);
+            var quantity = parseInt(quantityElement.textContent);
+            var total = price * quantity;
+
+            if (action === 'buy') {
+                alert(`You have selected to buy ${quantity} copies of ${bookTitle}. Total cost: $${total}`);
+            } else if (action === 'rent') {
+                alert(`You have selected to rent ${quantity} copies of ${bookTitle}. Total cost: $${total}`);
+            }
+        }
+
+        function addToCart(bookTitle, price) {
+            var quantityElement = document.getElementById(`quantity${bookTitle.replace(/\s+/g, '')}`);
+            var quantity = parseInt(quantityElement.textContent);
+            var total = price * quantity;
+            alert(`${quantity} copies of ${bookTitle} added to cart. Total cost: $${total}`);
+        }
+    </script>
+</body>
+</html>

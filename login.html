@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style>
+body{
+	background-image:url("C:/Users/Vijayalakshmi/OneDrive/Desktop/fsd project/books.jpg");
+	background-size:cover;
+	 display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .centered-box {
+            width: 300px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+        }
+
+        /* Style the form inside the centered box */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+			color:white;
+			font-size: 30px;
+        }
+
+        input, button {
+            margin-bottom: 16px;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color:#fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+	}
+
+</style>
+</head>
+<body>
+ <div class="Login">
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
